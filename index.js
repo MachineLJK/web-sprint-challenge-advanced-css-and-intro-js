@@ -245,9 +245,19 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
+function get20s(arr) {
+  let newArr = [];
+
+  for(let i = 0; i < arr.length; i++) {
+    let dates = arr[i].years.split(' - ');
+    if (dates[0] > 1899 && dates[1] < 2001) {
+      newArr.push(arr[i].name);
+
+  }
 }
+return newArr;
+}
+console.log(get20s(artists));
 
 
 
@@ -260,9 +270,11 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+ function removeArtist(artistArr, indexNumber){
+  artistArr.splice(indexNumber, 1);
+  return artistArr.length;
 }
+  console.log(removeArtist(artists, 0));
    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -281,9 +293,19 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(artArray){
+    let newArtist = {
+      "id": 20,
+      "name": "Luke Kudialis", 
+      "years": "2021 - Sunday",
+      "genre": "Web Design", 
+      "nationality": "Mutt",
+      "bio": "lorem ipsum",
+    }
+    artArray.push(newArtist);
+    return artArray
   }
+  console.log(addArtist(artists))
 
   
 
