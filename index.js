@@ -327,7 +327,7 @@ function lotsOfArt(artists) {
 }
 console.log(lotsOfArt(artists));
 
-
+const myName = "CodeGradeTest"
 
 
 // 🎨🎨 STRETCH 🎨🎨//
